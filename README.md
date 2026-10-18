@@ -118,7 +118,7 @@ $$f(t) = 1 - (1 - t)^3$$
 
 ```bash
 # Clone the repository
-git clone https://github.com/USERNAME/choosely.git
+git clone https://github.com/Madhan-mdn/choosely.git
 cd choosely
 
 # Install dependencies
