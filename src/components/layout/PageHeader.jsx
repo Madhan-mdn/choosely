@@ -138,7 +138,7 @@ export function PageHeader({ onOpenMobileMenu }) {
         </div>
       </div>
 
-      {/* Mobile / Tablet Right: Quick Category Switcher + Settings Shortcut */}
+      {/* Mobile / Tablet Right: Quick Category Switcher */}
       <div className="flex lg:hidden items-center gap-1.5">
         {categories.length > 0 && !isConfigOrLegalRoute && (
           <div className="relative hidden sm:block">
@@ -159,14 +159,6 @@ export function PageHeader({ onOpenMobileMenu }) {
             </span>
           </div>
         )}
-        <button
-          type="button"
-          onClick={() => navigate('/settings')}
-          aria-label="Settings and preferences"
-          className="p-1.5 rounded-lg text-secondary hover:bg-surface-container hover:text-primary active:scale-[0.98] transition-all cursor-pointer"
-        >
-          <Icon name="tune" size={20} />
-        </button>
       </div>
 
       {/* Desktop Left: Global Search Input + Category Filter Tabs */}
@@ -283,23 +275,6 @@ export function PageHeader({ onOpenMobileMenu }) {
           </button>
         )}
 
-        {!isConfigOrLegalRoute && (
-          <div className="h-4 w-[1px] bg-outline-variant/40 mx-0.5"></div>
-        )}
-
-        <button
-          type="button"
-          onClick={() => navigate('/settings')}
-          title="Settings & Data Management"
-          aria-label="Settings & Data Management"
-          className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors cursor-pointer ${
-            location.pathname === '/settings'
-              ? 'bg-surface-container text-primary font-semibold'
-              : 'text-secondary hover:text-on-surface hover:bg-surface-container-low'
-          }`}
-        >
-          <Icon name="tune" size={18} />
-        </button>
       </div>
     </header>
   );
