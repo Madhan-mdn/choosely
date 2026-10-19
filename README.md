@@ -148,7 +148,7 @@ Choosely includes a headless browser screenshot capture script that spins up an 
 # Ensure build exists first
 npm run build
 
-# Capture all 12 page views across desktop, mobile, and dark theme
+# Capture all 10 page views across desktop, mobile, and dark theme
 npm run screenshots
 ```
 
@@ -201,12 +201,10 @@ npm run screenshots
 │   │   └── useTheme.js              # Instant Light/Dark class synchronization
 │   ├── pages/
 │   │   ├── Dashboard.jsx            # Quick Decision Engine, workspace metrics & recent history
-│   │   ├── DecisionGenerator.jsx    # Primary category & contender management studio
 │   │   ├── Favorites.jsx            # Curated shortlist with direct decision execution
+│   │   ├── Generator.jsx            # Primary category & contender management studio
 │   │   ├── History.jsx              # Searchable, filterable audit ledger with CSV export
-│   │   ├── Privacy.jsx              # Zero-telemetry client-side privacy disclosure
 │   │   ├── Settings.jsx             # Theme, motion, JSON backup/restore & data reset
-│   │   ├── Terms.jsx                # Usage terms for local client-side tool
 │   │   └── WheelArena.jsx           # Spin Wheel & Elimination Bracket views
 │   ├── utils/
 │   │   ├── decisionAlgorithms.js    # Pure selection math, canvas physics & brackets

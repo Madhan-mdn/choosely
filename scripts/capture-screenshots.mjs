@@ -191,27 +191,7 @@ async function run() {
       await context.close();
     }
 
-    // 8. Privacy Policy (Desktop)
-    console.log('Capturing: privacy-policy.png');
-    {
-      const { page, context } = await createPage(desktopViewport, false);
-      await page.goto(`${baseUrl}/privacy`, { waitUntil: 'networkidle' });
-      await page.waitForTimeout(800);
-      await page.screenshot({ path: path.join(SCREENSHOTS_DIR, 'privacy-policy.png') });
-      await context.close();
-    }
-
-    // 9. Terms of Service (Desktop)
-    console.log('Capturing: terms-of-service.png');
-    {
-      const { page, context } = await createPage(desktopViewport, false);
-      await page.goto(`${baseUrl}/terms`, { waitUntil: 'networkidle' });
-      await page.waitForTimeout(800);
-      await page.screenshot({ path: path.join(SCREENSHOTS_DIR, 'terms-of-service.png') });
-      await context.close();
-    }
-
-    // 10. Dashboard Mobile View
+    // 8. Dashboard Mobile View
     console.log('Capturing: dashboard-mobile.png');
     {
       const { page, context } = await createPage(mobileViewport, false);
@@ -221,7 +201,7 @@ async function run() {
       await context.close();
     }
 
-    // 11. Spin Wheel Mobile View
+    // 9. Spin Wheel Mobile View
     console.log('Capturing: spin-wheel-mobile.png');
     {
       const { page, context } = await createPage(mobileViewport, false);
@@ -231,7 +211,7 @@ async function run() {
       await context.close();
     }
 
-    // 12. Dashboard Dark Theme (Desktop)
+    // 10. Dashboard Dark Theme (Desktop)
     console.log('Capturing: dashboard-dark.png');
     {
       const { page, context } = await createPage(desktopViewport, true);
@@ -241,7 +221,7 @@ async function run() {
       await context.close();
     }
 
-    console.log('All 12 screenshots captured successfully!');
+    console.log('All 10 screenshots captured successfully!');
   } finally {
     await browser.close();
     await server.close();

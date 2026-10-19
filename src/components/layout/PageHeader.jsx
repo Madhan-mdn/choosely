@@ -15,8 +15,6 @@ const ROUTE_TITLES = {
   '/history': 'History',
   '/favorites': 'Saved Favorites',
   '/settings': 'Preferences',
-  '/terms': 'Terms of Service',
-  '/privacy': 'Privacy Policy',
 };
 
 export function PageHeader({ onOpenMobileMenu }) {
@@ -57,16 +55,15 @@ export function PageHeader({ onOpenMobileMenu }) {
   }, [selectedMethod]);
 
   // Determine whether the top header quick-run button should be shown:
-  // - Hidden on /settings, /privacy, /terms (irrelevant on settings/legal pages)
+  // - Hidden on /settings (irrelevant on settings page)
   // - Hidden on /, /generator, /wheel because those pages already have primary execution buttons
   // - Shown on /history and /favorites so users can run the active category/method without leaving
-  const isConfigOrLegalRoute = ['/settings', '/privacy', '/terms'].includes(
-    location.pathname
-  );
+  const isConfigRoute = location.pathname === '/settings';
+  const isConfigOrLegalRoute = isConfigRoute;
   const hasPagePrimaryRunButton = ['/', '/generator', '/wheel'].includes(
     location.pathname
   );
-  const showHeaderQuickRun = !isConfigOrLegalRoute && !hasPagePrimaryRunButton;
+  const showHeaderQuickRun = !isConfigRoute && !hasPagePrimaryRunButton;
 
   // Support Ctrl+K / Cmd+K to focus global search input
   useEffect(() => {

@@ -788,7 +788,7 @@ export function Dashboard() {
             )}
           </section>
 
-          {/* Local Storage & Privacy Summary Banner */}
+          {/* Local Storage Architecture Summary Banner */}
           <section className="p-4 rounded-lg bg-surface-container-lowest hairline-border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg accent-soft-bg text-primary-container flex items-center justify-center shrink-0">
@@ -796,20 +796,13 @@ export function Dashboard() {
               </div>
               <div className="flex flex-col">
                 <span className="font-label-md text-label-md text-on-surface font-semibold">
-                  Zero Telemetry • Privacy Preserved
+                  Zero Telemetry • 100% Client-Side
                 </span>
                 <span className="font-body-sm text-body-sm text-secondary">
                   All categories, weights, favorites, and history stay in your browser's LocalStorage.
                 </span>
               </div>
             </div>
-            <Link
-              to="/privacy"
-              className="font-label-md text-label-md text-primary-container hover:underline font-semibold flex items-center gap-1 shrink-0"
-            >
-              <span>Privacy Details</span>
-              <Icon name="arrow_forward" size={14} />
-            </Link>
           </section>
         </div>
       </div>

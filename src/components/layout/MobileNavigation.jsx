@@ -108,24 +108,6 @@ export function MobileNavigation({ drawerOpen, onCloseDrawer }) {
                   {themeBadgeLabel}
                 </span>
               </button>
-
-              <div className="flex items-center justify-between px-3 pt-1 text-secondary font-label-sm text-[11px]">
-                <Link
-                  to="/privacy"
-                  onClick={onCloseDrawer}
-                  className="hover:text-primary hover:underline"
-                >
-                  Privacy Policy
-                </Link>
-                <span>•</span>
-                <Link
-                  to="/terms"
-                  onClick={onCloseDrawer}
-                  className="hover:text-primary hover:underline"
-                >
-                  Terms of Service
-                </Link>
-              </div>
             </div>
           </aside>
         </div>

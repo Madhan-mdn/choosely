@@ -1,5 +1,4 @@
 import React, { useMemo, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useAppState } from '../context/AppStateContext';
 import { Icon } from '../components/ui/Icon';
 import { Button } from '../components/ui/Button';
@@ -552,23 +551,10 @@ export function Settings() {
         </Button>
       </section>
 
-      {/* Legal & Documentation Links */}
+      {/* Workspace Architecture Footer */}
       <footer className="pt-4 hairline-t flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-secondary">
         <p>Choosely · Client-Side React + Vite Architecture</p>
-        <div className="flex items-center gap-6 font-semibold">
-          <Link
-            to="/privacy"
-            className="hover:text-primary transition-colors"
-          >
-            Privacy Policy
-          </Link>
-          <Link
-            to="/terms"
-            className="hover:text-primary transition-colors"
-          >
-            Terms of Service
-          </Link>
-        </div>
+        <p>Zero tracking • 100% local browser storage</p>
       </footer>
 
       {/* Reset All Data Confirmation Modal */}
